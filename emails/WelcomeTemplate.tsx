@@ -3,6 +3,7 @@ import {
   Html,
   Body,
   Preview,
+  Tailwind,
   Container,
   Text,
   Link,
@@ -12,10 +13,14 @@ const WelcomeTemplate = ({ name }: { name: string }) => {
   return (
     <Html>
       <Preview>Welcome aboard!</Preview>
-      <Container>
-        <Text>Hello {name}</Text>
-        <Link href="https://codewithmosh.com">www.codewithmosh.com</Link>
-      </Container>
+      <Tailwind>
+        <Body className="bg-white">
+          <Container>
+            <Text className="font-bold text-3xl">Hello {name}</Text>
+            <Link href="https://codewithmosh.com">www.codewithmosh.com</Link>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
 };
